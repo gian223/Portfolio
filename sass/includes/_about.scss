@@ -1,0 +1,61 @@
+.about{
+    padding: 5rem 0 5rem 0;
+
+    &-center{
+        text-align: center;
+    }
+
+    &-image{
+        width: 15rem;
+        height: 15rem;
+        object-fit: cover;
+        border-radius: 5%;
+    }
+
+    &-text{
+        p{
+            font-size: 1.4rem;
+        }
+    }
+
+    &-bar {
+        background-color: $color-grey-light-1;
+        padding: 3px;
+        font-size: 1rem;
+        font-weight: 500;
+        margin-bottom: .5rem;
+        color: $color-white;
+        
+        &__progress{
+            background-image: linear-gradient(to right bottom, rgba($color-teal-1, .9), rgba($color-teal-2, .9));
+            border-radius: 2px;
+            padding-left: .5rem;
+            display: inline-block;
+        }
+
+        &__percent{
+            float: right;
+            font-weight: 500;
+            color: $color-black;
+        }
+
+        &__50{
+            width: 50%;
+        }
+        &__60{
+            width: 60%;
+        }
+        &__70{
+            width: 70%;
+        }
+        &__80{
+            width: 80%;
+        }
+        &__90{
+            width: 90%;
+        }
+        &__100{
+            width: 100%;
+        }
+      }
+}

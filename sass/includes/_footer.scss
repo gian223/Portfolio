@@ -1,0 +1,10 @@
+.footer{
+    background-image: linear-gradient(to right bottom, rgba($color-primary-light, .9), rgba($color-primary-dark, .9));
+    padding: .7rem 0 .7rem 0;
+    text-align: center;
+
+    p{
+        color: $color-white;
+        font-size: 1rem;
+    }
+}

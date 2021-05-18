@@ -1,0 +1,98 @@
+.button{
+    display: inline-block;
+    text-decoration: none;
+    position: relative;
+    padding:.8rem;
+    text-align: center;
+    width: 12rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    transition: all .5s;
+    background-image: linear-gradient(to right bottom, rgba($color-white, .9), rgba($color-grey-light-2, .9));
+    color: $color-primary-dark;
+    border-radius: 2px;
+    border: none !important;
+    cursor: pointer !important;
+    &:focus{
+        outline: none !important;
+    }
+
+    &-small{
+        margin-top: .5rem;
+        padding: .2rem;
+    }
+
+    &-animate{
+        animation-name: moveInButton;
+        animation-duration: 2s;
+        animation-timing-function: ease-out;
+    }
+
+    &-icon{
+        top: .2rem;
+        right: 1rem;
+        font-size: 1.5rem;
+        position: absolute;
+    }
+
+    &:hover{
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba($color-black,.2);
+        &::after{
+            transform: scaleX(1.4) scaleY(1.6);
+            opacity: 0;
+        }
+    }
+}
+
+
+
+
+.tags{
+    &,
+    &:link,
+    &:visited{
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: .8rem;
+        text-decoration: none;
+        padding: .4rem 1rem .5rem 2.3rem;
+        display: inline-block;
+        border-radius: 3px;
+        transition: all .2s;
+        position: relative;
+        color: $color-white;
+        box-shadow: 0 .2rem 1rem rgba($color-black, .25);
+        margin-bottom: .3rem;
+
+    }
+
+    &:not(:last-child){
+        margin-right: .5rem;
+    }
+
+    img{
+        width: 1.3rem;
+        height:1.3rem;
+        position: absolute;
+        left: .6rem;
+        top: .5rem;
+        
+    }
+
+    &--laravel{
+        background-image: linear-gradient(to right bottom, rgba($color-primary-light, .9), rgba($color-primary-dark, .9));
+
+        
+    }
+
+    &--html{
+        background-image: linear-gradient(to right bottom, rgba($color-primary-light, .9), rgba($color-primary-dark, .9));
+
+        
+    }
+
+    &:hover{
+        
+    }
+}

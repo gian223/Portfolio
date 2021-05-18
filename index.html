@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+
+        <link rel="stylesheet" href="css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+        <meta property="og:site_name" content="Matt Farley">
+        <link rel="icon" href="img/port_icon.png">
+        
+        <title>Gian Clarke | Web Developer Portfolio</title>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
+        </script>
+        <script type="text/javascript">
+            (function(){
+                emailjs.init("user_56cW13ElyDwJTfoqStfk1");
+            })();
+        </script>
+        <script type="text/javascript">
+            window.onload = function() {
+                document.getElementById('contact-form').addEventListener('submit', function(event) {
+                    event.preventDefault();
+                    // generate a five digit number for the contact_number variable
+                    this.contact_number.value = Math.random() * 100000 | 0;
+                    // these IDs from the previous steps
+                    emailjs.sendForm('service_8awoaac', 'template_9odcqip', this)
+                        .then(function() {
+                            console.log('SUCCESS!');
+                            document.querySelector('#name').value = '';
+                            document.querySelector('#email').value = '';
+                            document.querySelector('#message').value = '';
+                            document.querySelector('#success-message').textContent = 'Thank you for your email, i will be in contact with you as soon as possible';
+                        }, function(error) {
+                            console.log('FAILED...', error);
+                        });
+                });
+            }
+        </script>
+    </head>
+    <body>
+
+        <div class="header">
+            <a href="#" class="header-initials">GC</a>
+            <div class="header-text">
+                <h1 class="header-title header-title__main">Hello, I'm <span class="header-featured">Gian Clarke</span>.</h1>
+                <h1 class="header-title header-title__sub u-margin-bottom-2">I'm a full-stack web developer.</h1>
+                <a href="#mywork" class="button button-animate">View my work <span class="button-icon">&#187;</span></a>
+            </div>
+            <div class="navigation">
+                <div class="row">
+                    <ul class="navigation-list">
+                        <li class="navigation-item">
+                            <a href="#" class="navigation-link navigation-link__selected">Home</a>
+                        </li>
+                        <li class="navigation-item">
+                            <a href="#about" class="navigation-link">About</a>
+                        </li>
+                        <li class="navigation-item">
+                            <a href="#mywork" class="navigation-link">Portfolio</a>
+                        </li>
+                        <li class="navigation-item">
+                            <a href="#contact" class="navigation-link">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- ABOUT SECTION -->
+        <div class="about" id="about">
+            <h1 class="heading-primary u-margin-bottom-4">ABOUT</h1>
+            <div class="row">
+
+                <div class="col-1-of-2">
+                    <div class="about-center">
+                        <img src="img/cv_profile.jpg" alt="" class="about-image">
+                        <div class="about-text">
+                            <h2 class="heading-secondary">who am i?</h2>
+                            <p>I am a junior full stack web developer with a passion for ecommerce solutions and web applications</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-1-of-2">
+
+                    <div class="about-bar">
+                        <div class="about-bar__progress about-bar__90">HTML</div>
+                        <div class="about-bar__percent">90%</div>
+                    </div>
+                    <div class="about-bar">
+                        <div class="about-bar__progress about-bar__90">CSS / Sass</div>
+                        <div class="about-bar__percent">90%</div>
+                    </div>
+                    <div class="about-bar">
+                        <div class="about-bar__progress about-bar__70">PHP</div>
+                        <div class="about-bar__percent">70%</div>
+                    </div>
+                    <div class="about-bar">
+                        <div class="about-bar__progress about-bar__70">Laravel</div>
+                        <div class="about-bar__percent">70%</div>
+                    </div>
+                    <div class="about-bar">
+                        <div class="about-bar__progress about-bar__70">MySQL</div>
+                        <div class="about-bar__percent">70%</div>
+                    </div>
+                    <div class="about-bar">
+                        <div class="about-bar__progress about-bar__60">Wordpress / WooCommerce</div>
+                        <div class="about-bar__percent">60%</div>
+                    </div>
+                    <div class="about-bar">
+                        <div class="about-bar__progress about-bar__50">jQuery / Vue</div>
+                        <div class="about-bar__percent">50%</div>
+                    </div>
+                    <div class="about-bar">
+                        <div class="about-bar__progress about-bar__50">Git / GitHub / Composer</div>
+                        <div class="about-bar__percent">50%</div>
+                    </div>
+                    <div class="about-bar">
+                        <div class="about-bar__progress about-bar__50">SEO</div>
+                        <div class="about-bar__percent">50%</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- PORTFOLIO SECTION -->
+        <div class="portfolio" id="mywork">
+            <h1 class="heading-primary u-margin-bottom-4">PORTFOLIO</h1>
+            <div class="row">
+                <div class="col-1-of-3">
+                    <div class="portfolio-box">
+                        <img src="img/officeworld-background.jpg" alt="" class="portfolio-box__image">
+
+                        <div class="portfolio-box__cover">
+                            
+                        </div>
+                        
+                        <img src="img/office_world_logo.png" alt="" class="portfolio-box__logo">
+                        
+                        <div class="portfolio-box__content">
+                            Office World is an ecommerce store for office and technology products.
+                            <ul>
+                                <li class="tags tags--html"><img src="img/laravel-icon.png" alt="icon">laravel</li>
+                                <li class="tags tags--html"><img src="img/html5-icon.png" alt="icon">Html</li>
+                                <li class="tags tags--html"><img src="img/vue-icon.png" alt="icon">vue.js</li>
+                                <li class="tags tags--html"><img src="img/css-icon.png" alt="icon">css</li>
+                                <li class="tags tags--html"><img src="img/sass-icon.png" alt="icon">sass</li>
+                            </ul>
+                            <a href="https://officeworld.co.nz/" class="button button-small button-animate" target="_blank">Visit Website</a>
+                        </div>
+                    </div>     
+                </div>
+
+                <div class="col-1-of-3">
+                    <div class="portfolio-box">
+                        <img src="img/albass-background.jpg" alt="" class="portfolio-box__image">
+
+                        <div class="portfolio-box__cover">
+                            
+                        </div>
+                        
+                        <img src="img/albass_logo.jpg" alt="" class="portfolio-box__logo">
+                        
+                        <div class="portfolio-box__content">
+                            This website showcases a local Christchurch companies plaster & paint services.
+                            <ul>
+                                <li class="tags tags--html"><img src="img/html5-icon.png" alt="icon">Html</li>
+                                <li class="tags tags--html"><img src="img/css-icon.png" alt="icon">css</li>
+                                <li class="tags tags--html"><img src="img/sass-icon.png" alt="icon">sass</li>
+                            </ul>
+                            <a href="https://albass.co.nz/" class="button button-small button-animate" target="_blank">Visit Website</a>
+                        </div>
+                    </div>     
+                </div>
+            
+            </div>
+        </div>
+
+        <!-- CONTACT SECTION -->
+        <div class="contact" id="contact">
+            <h1 class="heading-primary u-margin-bottom-4">Contact</h1>
+            <div class="contact-box">
+                <p id="success-message"></p>
+                <form class="contact-box__form" id="contact-form">
+                    <input type="hidden" name="contact_number">
+                    <label for="name" class="contact-box__label">Name</label>
+                    <input type="text" id="name" class="contact-box__input" name="user_name">
+                    <label for="email" class="contact-box__label">Email</label>
+                    <input type="text" id="email" class="contact-box__input" name="user_email">
+                    <label for="message" class="contact-box__label">Message</label>
+                    <textarea id="message" class="contact-box__textarea" name="message"></textarea>
+                    <input type="submit" value="Send" class="button button-animate">
+                </form>
+            </div>
+        </div>
+
+        <!-- FOOTER SECTION -->
+        <div class="footer">
+            <p>Coptyright at gian-portfolio.com. All rights reserved.</p>
+        </div>
+        
+
+    </body>
+</html>

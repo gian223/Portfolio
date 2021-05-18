@@ -1,0 +1,48 @@
+.contact{
+    padding: 5rem 0 5rem 0;
+
+
+    &-box{
+        margin: 0 auto;
+        width: 60%;
+
+        &__label{
+            display: block;
+            font-size: 1rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: $color-primary-dark;
+        }
+
+        &__input{
+            color: $color-primary-light;
+            display: block;
+            width: 100%;
+            height: 2rem;
+            font-size: 1.3rem;
+            padding: .2rem .5rem .2rem .5rem;
+            margin-bottom: 1rem;
+        }
+
+        &__textarea{
+            font-family: 'lato', sans-serif;
+            display: block;
+            resize: none;
+            width: 100%;
+            font-size: 1.3rem;
+            padding: .2rem .5rem .2rem .5rem;
+            margin-bottom: 1rem;
+        }
+
+        &__button{
+            display: block;
+            border: 0;
+            background-image: linear-gradient(to right bottom, rgba($color-teal-1, .9), rgba($color-teal-2, .9));
+            color: $color-white;
+            padding: .3rem 1rem .3rem 1rem;
+            font-size: 1.5rem;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+    }
+}
